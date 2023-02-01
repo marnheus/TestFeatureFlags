@@ -39,7 +39,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddAzureAppConfiguration();
 
 // Add feature management to the container of services.
-builder.Services.AddFeatureManagement().AddFeatureFilter<TargetingFilter>();
+builder.Services.AddFeatureManagement().AddFeatureFilter<TargetingFilter>().AddFeatureFilter<PercentageFilter>();
 
 builder.Services.AddSingleton<ITargetingContextAccessor, TestTargetingContextAccessor>();
 
